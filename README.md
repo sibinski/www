@@ -1,2 +1,2 @@
-Programming in HTML, CSS, JavaScript using Copilot.
+Programming in HTML, CSS, JavaScript using Copilot.<br>
 Index is the master webpage and challenge.html is the secondary demo webpage.
