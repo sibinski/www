@@ -1,0 +1,78 @@
+            .aboutme {
+                color: white;
+                font-family: 'Oswald Font Family', sans-serif;
+                text-align: center;
+            }
+
+            .ul1 {
+                color: cyan;
+                font-family: sans-serif;
+                text-align: center;
+                align-items: center;
+            }
+
+
+            h1 {
+                color: blue;
+                font-family: 'Oswald Font Family', sans-serif;
+                text-align: center;
+            }
+
+            h2 {
+                color: green;
+                font-family: sans-serif;
+                text-align: center;
+            }
+            .p1 {
+                color: purple;
+                font-family: sans-serif;
+                text-align: center;
+            }
+
+            .p2 {
+                color: orange;
+                font-family: sans-serif;
+                text-align: center;
+            }
+            .p3 {
+                color: violet;
+                font-family: sans-serif;
+                text-align: center;
+            }
+            body {
+                background-color: black;
+            }
+
+            .href1 {
+                color: yellow; 
+                font-family: sans-serif; 
+                text-align: center; 
+                display: block;
+            }
+
+            .href2 {
+                color: whitesmoke; 
+                font-family: sans-serif; 
+                text-align: center; 
+                display: block;
+            }
+
+            .src1 {
+                display: block; 
+                margin-left: auto; 
+                margin-right: auto;
+            }
+
+            body {
+                background-color: black;
+                color: purple;
+                font-family: 'Oswald Font Family', sans-serif;
+                text-align: center;
+            }
+
+            @media screen and (max-width: 600px) {
+                body {
+                    background-color: lightgray;
+                }
+                
+            }
