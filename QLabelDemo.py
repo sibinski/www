@@ -2,27 +2,35 @@ import sys
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QDesktopWidget, QVBoxLayout
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QLineEdit, QHBoxLayout
 
 
 def main():
     app = QApplication(sys.argv)
     window = QWidget()
     window.resize(320, 300) # Set window size
-    qr = window.frameGeometry() # Get the frame geometry of the window
-    cp = QDesktopWidget().availableGeometry().center() # Get the centre point of the screen
-    qr.moveCenter(cp)
-    window.move(qr.topLeft()) # # Position window so its centre matches screen centre
-    window.setWindowTitle("Label Demo App")
-    text = QLabel(window)
+    # Center the window
+    screen = app.primaryScreen().availableGeometry().center() # Get the centre point of the screen
+    frame = window.frameGeometry() # Get the frame geometry of the window
+    frame.moveCenter(screen)
+    window.move(frame.topLeft()) # # Position window so its centre matches screen centre
+    window.setWindowTitle("Demo App")
+    main_layout = QVBoxLayout()
+    # Row layout for label and input
+    row = QHBoxLayout()
+    text = QLabel("Enter your name: ")
     font = QFont()
-    font.setPointSize(14)
+    font.setPointSize(15)
     text.setFont(font)
-    text.setText("PyQt Application Test.")
-    text.setAlignment(Qt.AlignCenter)
-    layout = QVBoxLayout()
-    layout.addWidget(text)
-    window.setLayout(layout)
+    text.setAlignment(Qt.AlignLeft)
+    name = QLineEdit()
+    #name.setFixedWidth(350)
+    name.setAlignment(Qt.AlignLeft)
+    row.addWidget(text)
+    row.addWidget(name)
+    row.addStretch() # Extra space after input line
+    main_layout.addLayout(row)
+    window.setLayout(main_layout)
     window.show()
     sys.exit(app.exec_())
 
