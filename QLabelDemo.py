@@ -2,7 +2,7 @@ import sys
 
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QFont
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QLineEdit, QHBoxLayout
+from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QVBoxLayout, QLineEdit, QHBoxLayout, QPushButton
 
 
 def main():
@@ -31,6 +31,13 @@ def main():
     row.addStretch() # Extra space after input line
     main_layout.addLayout(row)
     window.setLayout(main_layout)
+    submit_btn: QPushButton = QPushButton("Submit")
+    submit_btn.setFixedWidth(100)
+    def on_submit():
+        print("Submitted: ", name.text())
+    submit_btn.clicked.connect(on_submit)
+    main_layout.addWidget(submit_btn,
+                          alignment=Qt.AlignCenter)
     window.show()
     sys.exit(app.exec_())
 
