@@ -20,7 +20,7 @@ def main():
     row = QHBoxLayout()
     text = QLabel("Enter your name: ")
     font = QFont()
-    font.setPointSize(15)
+    font.setPointSize(12)
     text.setFont(font)
     text.setAlignment(Qt.AlignLeft)
     name = QLineEdit()
